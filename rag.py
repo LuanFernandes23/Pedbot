@@ -197,12 +197,12 @@ def generate_audio(response, session_id):
 # Streamlit App
 def main():
     st.set_page_config(
-        page_title="Converse com seu site/PDF",
+        page_title="Converse com a Pedbot",
         page_icon=":orange_heart:"
     )
 
-    st.title("Chat with PDFs/URLs :book:")
-    st.write("Use it wisely, pretty :heart:")
+    st.title("Chat with Pedbot :book:")
+    st.write("Use com cautela!")
     
     if "loader" not in st.session_state:
         st.session_state.loader = DocumentLoader()
@@ -228,7 +228,7 @@ def main():
         st.title("Menu:")
         
         st.file_uploader(
-            "Faça upload dos PDFs", accept_multiple_files=True, key='uploaded_pdfs', on_change=process_pdfs)
+            "Faça upload do com sintomas PDF", accept_multiple_files=True, key='uploaded_pdfs', on_change=process_pdfs)
 
         urls = st.text_area("Cole os URLs, um por linha:")
 
